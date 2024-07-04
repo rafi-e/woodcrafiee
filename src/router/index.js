@@ -1,0 +1,19 @@
+export { Home } from "../screen/home/Home";
+export { Product } from "../screen/product/Product";
+export { ProductDetails } from "../screen/product/ProductDetails";
+export { Shop } from "../screen/shop/Shop";
+export { CartPage } from "../screen/CartPage";
+
+export { Banner } from "../components/product/Banner";
+export { CheckoutForm } from "../components/cart/CheckoutForm";
+export { Hero } from "./../components/hero/Hero";
+export { FilterDiscover } from "../components/hero/InstagramPost";
+export { InstagramPost } from "../components/hero/InstagramPost";
+export { Layout } from "../components/common/Layout";
+export { ModelCart } from "../components/cart/ModelCart";
+export { ProductCard } from "../components/product/ProductCard";
+export { ProductCard2 } from "../components/product/ProductCard2";
+export { ProductSlide } from "../components/product/ProductSlide";
+export { ProductSlideCard } from "../components/product/ProductSlide";
+export { ShippingInfo } from "../components/product/ShippingInfo";
+export { Testimoni } from "../components/hero/Testimoni";
