@@ -129,6 +129,9 @@ export const ModelCart = () => {
                     handlePaymentSuccess={handlePaymentSuccess}
                   />
                 </div>
+                <NavLink to="/cart">
+                  <button className="primary-btn w-full">View Cart</button>
+                </NavLink>
               </>
             ) : (
               <>
