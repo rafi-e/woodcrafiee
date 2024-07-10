@@ -45,7 +45,7 @@ export const Hero = () => {
   };
   return (
     <>
-      <section className="h-[60vh] lg:h-[90vh] mt-20 bg-white-100 relative z-10">
+      <section className="h-[60vh] lg:h-[90vh] mt-12 md:mt-20 bg-white-100 relative z-10">
         <Slider {...settings}>
           {herolist.map((item) => (
             <HeroItem
@@ -87,7 +87,7 @@ export const HeroItem = ({ title, description, shop, prices, colors, image }) =>
             {title}
           </Title>
           <BodyOne className="text-sm tracking-tight">{description}</BodyOne>
-          <div className="flex items-start gap-8 my-5">
+          <div className="flex items-start md:gap-8 my-5">
             <div>
               <Caption>Prices</Caption>
               <div className="mt-3">
@@ -115,7 +115,7 @@ export const HeroItem = ({ title, description, shop, prices, colors, image }) =>
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
             <Link to={`/product-details/${shop}`}>
               <button className="primary-bton uppercase text-[10px] lg:text-base md:px-6 lg:px-10">
                 view details
@@ -140,7 +140,7 @@ export const HeroItem = ({ title, description, shop, prices, colors, image }) =>
 const Banner = () => {
   return (
     <>
-      <div className="py-20 container flex flex-col lg:flex-row items-center gap-5">
+      <div className="py-20 container flex flex-col md:flex-row items-center gap-5">
         <div>
           <BannerCard
             title="Wooden water Bottle"
@@ -148,7 +148,7 @@ const Banner = () => {
             cover="../images/hero/product1-1.png"
           />
         </div>
-        <div className="flex justify-between flex-col gap-8">
+        <div className="hidden md:flex justify-between flex-col gap-8">
           <BannerCard
             title="Wooden Tooth Brush"
             desc="UP TO 60% OF"
@@ -181,7 +181,7 @@ const BannerCard = ({ title, desc, cover, className, classSecond }) => {
           } ${className && classSecond ? "left-0 lg:left-48 top-0 w-96" : ""}`}
         >
           <div>
-            <div className=" text-[24px] md:text-[40px] font-[700] text-primary">
+            <div className=" text-[24px] lg:text-[40px] font-[700] text-primary">
               {title}
             </div>
             <p className="text-lg font-normal leading-none">{desc}</p>
