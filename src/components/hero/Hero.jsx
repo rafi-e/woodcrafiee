@@ -87,7 +87,7 @@ export const HeroItem = ({ title, description, shop, prices, colors, image }) =>
             {title}
           </Title>
           <BodyOne className="text-sm tracking-tight">{description}</BodyOne>
-          <div className="flex items-start md:gap-8 my-5">
+          <div className="flex items-start gap-8 my-5">
             <div>
               <Caption>Prices</Caption>
               <div className="mt-3">
