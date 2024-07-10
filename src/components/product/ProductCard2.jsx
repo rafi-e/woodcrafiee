@@ -28,8 +28,6 @@ export const ProductCard2 = ({
   discount,
   rating,
   featured,
-  //   category,
-  //   color,
 }) => {
   return (
     <>

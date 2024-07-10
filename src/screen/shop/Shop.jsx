@@ -5,7 +5,7 @@ export const Shop = () => {
   return (
     <>
       <section className="container mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
-      {productlists.map((product) => (
+      {productlists.slice(0, 8).map((product) => (
               <ProductCard2
                 id={product.id}
                 key={product.id}

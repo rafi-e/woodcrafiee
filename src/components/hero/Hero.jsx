@@ -5,6 +5,7 @@ import { herolist } from "../../assets/data/data";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 function SampleNextArrow(props) {
   const { onClick } = props;
@@ -51,6 +52,7 @@ export const Hero = () => {
               key={item.id}
               title={item.title}
               description={item.description}
+              shop={item.shop}
               prices={item.price}
               colors={item.color}
               image={item.image}
@@ -63,7 +65,7 @@ export const Hero = () => {
   );
 };
 
-export const HeroItem = ({ title, description, prices, colors, image }) => {
+export const HeroItem = ({ title, description, shop, prices, colors, image }) => {
   const [selectedColor, setSelectedColor] = useState(colors[0].value);
   const [selectedPrice, setSelectedPrice] = useState(
     prices.find((price) => price.color === colors[0].value)
@@ -89,7 +91,12 @@ export const HeroItem = ({ title, description, prices, colors, image }) => {
             <div>
               <Caption>Prices</Caption>
               <div className="mt-3">
-                <Title level={5} className=" text-base md:text-lg lg:text-[22px]">${selectedPrice.value.toFixed(2)}</Title>
+                <Title
+                  level={5}
+                  className=" text-base md:text-lg lg:text-[22px]"
+                >
+                  ${selectedPrice.value.toFixed(2)}
+                </Title>
               </div>
             </div>
             <div>
@@ -109,8 +116,16 @@ export const HeroItem = ({ title, description, prices, colors, image }) => {
             </div>
           </div>
           <div className="flex items-center gap-8">
-            <button className="primary-bton uppercase text-[10px] lg:text-base md:px-6 lg:px-10">view details</button>
-            <button className="secondary-bton uppercase text-[10px] lg:text-base md:px-6 lg:px-10">view shop</button>
+            <Link to={`/product-details/${shop}`}>
+              <button className="primary-bton uppercase text-[10px] lg:text-base md:px-6 lg:px-10">
+                view details
+              </button>
+            </Link>
+            <Link to="/shop">
+              <button className="secondary-bton uppercase text-[10px] lg:text-base md:px-6 lg:px-10">
+                view shop
+              </button>
+            </Link>
           </div>
         </div>
         <div className="right bg-white p-5  w-1/2 h-full flex justify-center items-center relative z-50">
@@ -135,13 +150,13 @@ const Banner = () => {
         </div>
         <div className="flex justify-between flex-col gap-8">
           <BannerCard
-            title="Wooden water Bottle"
+            title="Wooden Tooth Brush"
             desc="UP TO 60% OF"
             cover="../images/hero/product2.png"
             className={true}
           />
           <BannerCard
-            title="Wooden water Bottle"
+            title="Organic Wofen Bag"
             desc="UP TO 60% OF"
             cover="../images/hero/product3.png"
             className={true}
@@ -166,15 +181,20 @@ const BannerCard = ({ title, desc, cover, className, classSecond }) => {
           } ${className && classSecond ? "left-0 lg:left-48 top-0 w-96" : ""}`}
         >
           <div>
-            <Title level={2}>{title}</Title>
+            <div className=" text-[24px] md:text-[40px] font-[700] text-primary">
+              {title}
+            </div>
             <p className="text-lg font-normal leading-none">{desc}</p>
           </div>
           <div className="w-1/2 mt-5">
-            <button className="secondary-btn flex justify-end">Shop now</button>
+            <Link to="/shop">
+              <button className="secondary-btn flex justify-end">
+                Shop now
+              </button>
+            </Link>
           </div>
         </div>
       </div>
     </>
   );
 };
-

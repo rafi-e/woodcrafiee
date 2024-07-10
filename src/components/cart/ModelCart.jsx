@@ -69,7 +69,7 @@ export const ModelCart = () => {
         <>
           <div className="cartoverlay" onClick={closeModal}></div>
           <div
-            className={`cartmodel w-4/5 md:w-1/2 p-16 text-primary ${
+            className={`cartmodel w-4/5 md:w-1/2 lg:w-1/3 p-10 lg:p-16 text-primary ${
               isClosing ? "closing" : ""
             }`}
           >
@@ -107,7 +107,7 @@ export const ModelCart = () => {
             </div>
             {activeTab == "cart" ? (
               <>
-                <div className="h-64 md:h-80 overflow-auto">
+                <div className="lg:h-64 md:h-52 h-80 overflow-auto">
                   {cartItems.map((item) => (
                     <CartProduct
                       key={item.id}
@@ -166,8 +166,8 @@ export const CartProduct = ({ id, cover, title, price, quantity }) => {
   };
   return (
     <>
-      <div className="mt-5 border-b-2 border-gray-200 pb-5">
-        <div className="flex items-center gap-5">
+      <div className="mt-5 border-b-2 border-gray-200 pb-2 lg:pb-5">
+        <div className="flex items-center gap-2 lg:gap-5">
           <div className="images w-20 h-20">
             {cover?.slice(0, 1).map((images, i) => (
               <img

@@ -15,7 +15,7 @@ export const Product = () => {
             </BodyOne>
           </div>
           <div className="content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
-            {productlists.map((product, index) => (
+            {productlists.slice(0, 8).map((product, index) => (
               <ProductCard
                 id={product.id}
                 key={index}

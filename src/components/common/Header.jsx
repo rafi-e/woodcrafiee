@@ -55,11 +55,11 @@ export const Header = () => {
           <div
             className={` ${
               isScrolled ? "lg:bg-none" : "lg:bg-black"
-            } lg:h-[88px] lg:absolute lg:top-0 lg:right-0 lg:w-1/3 lg:z-10
+            } lg:h-[80px] lg:absolute lg:top-0 lg:right-0 lg:w-1/3 lg:z-10
             `}
           ></div>
         )}
-        <nav className="flex justify-between items-center relative py-4 px-0 md:px-4">
+        <nav className="flex justify-between items-center relative py-2 px-0 md:px-4">
           <div className="flex items-center gap-14">
             <Link to="/">
               <img
