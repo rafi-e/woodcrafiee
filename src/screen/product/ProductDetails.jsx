@@ -112,7 +112,7 @@ export const ProductDetails = () => {
               </Slider>
             </div>
           </div>
-          <div className="details lg:w-1/2 px-12 pt-16">
+          <div className="details lg:w-1/2 px-0 md:px-12 pt-16">
             <button className="feature-btn bg-indigo-600">
               SALE {discount}% OFF
             </button>
@@ -188,13 +188,13 @@ export const ProductDetails = () => {
                     </button>
                   </div>
                 ))}
-              <button onClick={addToCart} className="primary-btn ">
+              <button onClick={addToCart} className="primary-btn p-5 w-[320px]">
                 ADD TO CART
               </button>
             </div>
             <button
               onClick={addToFavorites}
-              className="flex items-center gap-2 secondary-btn text-lg mt-6"
+              className="flex items-center secondary-btn text-lg mt-6 w-[320px]"
             >
               Add to Wishlist
             </button>

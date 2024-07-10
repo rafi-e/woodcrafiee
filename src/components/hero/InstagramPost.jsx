@@ -39,7 +39,7 @@ const filterDiscoverItems = [
 export const InstagramPost = () => {
   return (
     <>
-      <section className="post grid-cols-1 grid md:grid-cols-3 lg:grid-cols-6">
+      <section className="post grid-cols-2 grid md:grid-cols-3 lg:grid-cols-6">
         {instagramPosts.map((post) => (
           <>
             <div className="h-72 lg:h-76 overflow-hidden" key={post.id}>
