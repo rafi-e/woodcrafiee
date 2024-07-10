@@ -78,7 +78,7 @@ export const HeroItem = ({ title, description, shop, prices, colors, image }) =>
   };
   return (
     <>
-      <section className="content flex justify-between lg:px-16 h-56 md:h-[60vh] lg:h-[90vh] relative z-20">
+      <section className="content flex justify-between lg:px-16 h-full md:h-[60vh] lg:h-[90vh] relative z-20">
         <div className="left w-1/2 p-4 md:p-8 lg:py-32 lg:px-16">
           <Title
             level={5}
